@@ -20,7 +20,8 @@ export class Shop extends Component {
                         categories={this.props.categories}/>
                 </div>
                 <div className="col-9 p-2">
-                    <ProductList products={this.props.products}/>
+                    <ProductList products={this.props.products}
+                        addToCart={this.props.addToCart}/>
                 </div>
             </div>
         </div>
