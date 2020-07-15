@@ -9,12 +9,14 @@ export class RestDataSource {
      * get all of the available objects for a specified data type.
      *
      * @param dataType Type of action to made in the data.
+     * @param params Request parameters, which will be used to request pages
+     *  and specify a category
      *
      * @returns {Promise<any>} Promise that is resolved when the response is
      *  received from the web service.
      */
-    GetData = (dataType) =>
-        this.SendRequest("get", RestUrls[dataType]);
+    GetData = async(dataType, params) =>
+        this.SendRequest("get", RestUrls[dataType], params);
 
-    SendRequest = (method, url) => Axios.request({method, url});
+    SendRequest = (method, url, params) => Axios.request({method, url, params});
 }
