@@ -1,4 +1,4 @@
-import {ActionsTypes} from "./Types";
+import {ActionsTypes, DataTypes} from "./Types";
 
 /**
  * Reducers are required to create and return new objects that
@@ -32,6 +32,11 @@ export const ShopReducer = (storeData, action) => {
             return {...storeData, pageSize: action.payload}
         case ActionsTypes.DATA_SET_SORT_PROPERTY:
             return {...storeData, sortKey: action.payload}
+        case ActionsTypes.DATA_STORE:
+            if (action.payload.dataType === DataTypes.ORDERS) {
+                return {...storeData, order: action.payload.data}
+            }
+            break;
         default:
             return storeData || {};
     }
