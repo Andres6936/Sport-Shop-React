@@ -50,7 +50,7 @@ export const ShopConnector = connect(mapStateToProps, mapDispatchToProps)(
                     <CartDetails {...this.props} {...routeProps} />} />
                 <Route path="/shop/checkout" render={routeProps =>
                     <Checkout {...this.props} {...routeProps} />} />
-                <Route path="/shop/checkout" render={routeProps =>
+                <Route path="/shop/thanks" render={routeProps =>
                     <Thanks {...this.props} {...routeProps} />} />
                 <Redirect to="/shop/products/all/1"/>
             </Switch>
