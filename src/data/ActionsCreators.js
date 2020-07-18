@@ -21,7 +21,7 @@ export const setPageSize = (newSize) =>
 export const setSortProperty = (newProp) =>
     ({type: ActionsTypes.DATA_SET_SORT_PROPERTY, payload: newProp});
 
-export const placeHolder = (order) => ({
+export const placeOrder = (order) => ({
     type: ActionsTypes.DATA_STORE,
     payload: dataSource.StoreData(DataTypes.ORDERS, order)
         .then(response => ({

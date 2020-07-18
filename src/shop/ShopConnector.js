@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import {DataTypes} from "../data/Types";
-import {loadData, placeHolder} from "../data/ActionsCreators";
+import {loadData, placeOrder} from "../data/ActionsCreators";
 import {addToCart, updateCartQuantity, removeFromCart, clearCart} from "../data/CartActionCreators";
 import {Shop} from './Shop'
 import {DataGetter} from "../data/DataGetter";
@@ -15,7 +15,7 @@ const mapStateToProps = (dataStore) => ({
 })
 
 const mapDispatchToProps = {
-    loadData, addToCart, updateCartQuantity, removeFromCart, clearCart, placeHolder
+    loadData, addToCart, updateCartQuantity, removeFromCart, clearCart, placeOrder
 }
 
 export const ShopConnector = connect(mapStateToProps, mapDispatchToProps)(
