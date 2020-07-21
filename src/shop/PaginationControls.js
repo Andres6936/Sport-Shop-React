@@ -1,6 +1,10 @@
 import React, {Component} from "react";
 import {PaginationButtons} from "./PaginationButtons";
 
+/**
+ * @property props.sizes {[int]} List with sizes of element to show for page.
+ * @property props.keys {[String]} List with the names to show.
+ */
 export class PaginationControls extends Component {
 
     constructor(props) {
